@@ -2,6 +2,7 @@ package com.cn.ssm.service.impl;
 
 import javax.annotation.Resource;
 
+import com.cn.ssm.dao.UserMapper;
 import org.springframework.stereotype.Service;
 
 import com.cn.ssm.dao.IUserDao;
@@ -14,7 +15,7 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
     @Resource
     private IUserDao userDao;
-
+    private UserMapper userMapper;
     //	@Override
     public User getUserById(int userId) {
         // TODO Auto-generated method stub
@@ -34,6 +35,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     public List<User> getAllUser() {
-        return this.userDao.selectAll();
+
+        return this.userDao.selectAllUser();
     }
 }

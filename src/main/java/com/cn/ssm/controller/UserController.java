@@ -69,6 +69,7 @@ public class UserController {
 	public String UserList(Model model) {
 		List<User> users=this.userService.getAllUser();
 		model.addAttribute("users",users);
+		model.addAttribute("a","41544");
 		return "userList";
 	}
 }

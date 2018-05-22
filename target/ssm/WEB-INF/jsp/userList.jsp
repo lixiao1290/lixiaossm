@@ -22,7 +22,7 @@
             </tr>
         </c:forEach>
     </table>
-
+${a}
 </div>
 </body>
 </html>

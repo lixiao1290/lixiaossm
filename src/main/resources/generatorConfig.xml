@@ -32,7 +32,7 @@
         </javaModelGenerator>
 
         <!-- sql mapper 映射配置文件 -->
-        <sqlMapGenerator targetPackage="com.cn.ssm.map"  targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="com.cn.ssm.mapping"  targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
