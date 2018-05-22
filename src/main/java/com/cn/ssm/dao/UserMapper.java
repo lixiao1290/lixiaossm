@@ -1,7 +1,10 @@
 package com.cn.ssm.dao;
 
 import com.cn.ssm.model.User;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +17,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    List<User> selectAll();
 }

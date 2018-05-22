@@ -3,6 +3,8 @@ package com.cn.ssm.dao;
 import com.cn.ssm.model.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface IUserDao {
     int deleteByPrimaryKey(Integer id);
@@ -16,4 +18,5 @@ public interface IUserDao {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    List<User> selectAll();
 }

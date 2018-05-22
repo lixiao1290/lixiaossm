@@ -2,6 +2,7 @@ package com.cn.ssm.controller;
 
 import javax.annotation.Resource;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,8 @@ import com.cn.ssm.model.User;
 import com.cn.ssm.service.IUserService;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -60,5 +63,12 @@ public class UserController {
 	public String deleteUser(@PathVariable int id) {
 		int count = this.userService.deleteUserById(id);
 		return "userInfo";
+	}
+
+	@RequestMapping(path = "/userlist")
+	public String UserList(Model model) {
+		List<User> users=this.userService.getAllUser();
+		model.addAttribute("users",users);
+		return "userList";
 	}
 }

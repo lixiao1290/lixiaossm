@@ -7,5 +7,6 @@
   
   <body>
     ${user.userName}
+    ${user.age}
   </body>
 </html>
